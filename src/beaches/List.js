@@ -1,9 +1,9 @@
 import React from 'react'
 import map from 'lodash/map'
-import Beach from './Beach'
+import Beach from './Item'
 
 export default ({ list, filters }) => (
-  <div>
+  <>
     {list && map(list,beach => {
       const show = ({state,location, name }) => {
         let show = true
@@ -31,6 +31,5 @@ export default ({ list, filters }) => (
       return show(beach) && <Beach {...beach} />
 
     })}
-  </div>
+  </>
 )
-  

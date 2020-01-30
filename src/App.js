@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import BeachesList from './beaches/List'
+import Grid from '@material-ui/core/Grid';
+
 import './App.css';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
+import BeachesList from './beaches/List'
+import Menu from './menu/Index'
+
 
 function App() {
   const [beaches, setBeaches] = useState([])
   const [filters, setFilters] = useState({ name: undefined, state: undefined })
+
   useEffect(() => {
     const url = "https://us-central1-top-praias-29185.cloudfunctions.net/fetchBeaches"
     axios.get(url).then(response => setBeaches(response.data.data))
@@ -15,10 +18,15 @@ function App() {
 
   return (
     <div className="App">
-      <TextField  style={{ paddingTop: 20, width: '90%'}}  placeholder="Filtrar por nome ou cidade" onChange={event => setFilters({...filters, name: event.target.value})}/>
-      <TextField  style={{ paddingTop: 20, width: '90%'}} placeholder="Filtrar por estado" onChange={event => setFilters({...filters, state: event.target.value})}/>
-      <BeachesList list={beaches} filters={filters}/>
-    </div>
+      <Grid container style={{ paddingTop: 40}}>
+        <Grid item xs={4} style={{ marginLeft: 20, marginTop: 50}}>
+          <Menu filters={filters} setFilters={setFilters} />
+        </Grid>
+       <Grid container item xs={7} justify="center" style={{ marginLeft: 20, marginTop: 30}}>
+          {beaches &&  <BeachesList list={beaches} filters={filters}/>}
+       </Grid>
+    </Grid>
+   </div>
   );
 }
 
