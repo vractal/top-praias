@@ -1,9 +1,10 @@
 html {
   font-size: 20px;
+  background-color: #f8fbfb;
+
 }
 
 .app {
-  background-color: #f8fbfb;
   display: flex;
   justify-content: center;
   padding: 1rem;

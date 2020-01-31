@@ -102,7 +102,7 @@ color: #848c83;
     align-items: center;
     max-width: 520px;
     background-color: #f8fbfb;
-    padding-top: 5rem;
+    padding-top: 6rem;
     margin-left: 0rem;
     z-index: 1000;
 
@@ -157,3 +157,10 @@ color: #848c83;
     display: none;
   }
 }
+
+
+@media (max-width: 600px) {
+  .menu {
+    padding-top: 8rem;
+  }
+ }
