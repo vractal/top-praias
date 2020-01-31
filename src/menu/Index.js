@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './menu.css'
-import Paper from '@material-ui/core/Paper';
 import Logo from './Logo'
 import Filters from './Filters'
 import menuToggle from './menu-toggle.png'
@@ -13,13 +12,13 @@ export default props => {
   const mobileClass = `menu-bar ${menu ? 'hide' :  ''}`
   return <div>
           <div className={desktopClass}>
-            <img className="arrow close" src={menuToggle} onClick={() => toggleMenu(!menu)}/>
+            <img alt="" className="arrow close" src={menuToggle} onClick={() => toggleMenu(!menu)}/>
             <Logo />
             <Filters {...props} />
           </div>
           <div className={mobileClass}>
-            <img className="arrow open rotateImage" src={menuToggle} onClick={() => toggleMenu(!menu)} />
-            <h1 className="title">PRAIA<img src={umbrella}/><span>BRASIL</span></h1>
+            <img alt="" className="arrow open rotateImage" src={menuToggle} onClick={() => toggleMenu(!menu)} />
+            <h1 className="title">PRAIA<img alt="" src={umbrella}/><span>BRASIL</span></h1>
           </div>
         </div>
 }

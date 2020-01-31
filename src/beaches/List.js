@@ -17,7 +17,7 @@ export default ({ list, filters }) => (
         return stateMatch && nameMatch
       }
 
-      return show(beach) && <Beach {...beach} />
+      return show(beach) && <Beach key={beach.name} {...beach} />
 
     })}
   </div>

@@ -3,7 +3,7 @@ import './beach.css'
 
 export default ({name, imgSrc, location, state, description }) =>{
   return <div className="overlay">
-            <img src={imgSrc}/>
+            <img alt="" src={imgSrc}/>
             <div  className="name title">
               <div>
                 <h3>{location}</h3>

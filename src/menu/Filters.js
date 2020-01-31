@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 import uniqBy from 'lodash/uniqBy'
-import uniq from 'lodash/uniq'
 import map from 'lodash/map'
 
 
