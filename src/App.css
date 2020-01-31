@@ -1,9 +1,10 @@
 html {
   font-size: 20px;
+  background-color: #f8fbfb;
+
 }
 
 .app {
-  background-color: #f8fbfb;
   display: flex;
   justify-content: center;
   padding: 1rem;
@@ -16,9 +17,12 @@ html {
 }
 
 
-@media (max-width: 1425px) {
+@media (max-width: 1480px) {
   html {
     font-size: 16px;
+  }
+  .logo img {
+    margin-top:2rem;
   }
 }
 @media (max-width: 1200px) {

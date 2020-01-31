@@ -4,7 +4,7 @@ import Beach from './Item'
 import { normalizeString } from '../utils'
 
 export default ({ list, filters }) => (
-  <div>
+  <div style={{ width: '100%', maxWidth: '880px'}}>
     {list && map(list,beach => {
       const show = ({normalizedState, normalizedName, normalizedLocation }) => {
         if (!filters.state && !filters.name){
