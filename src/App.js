@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import Grid from '@material-ui/core/Grid';
 
 import './App.css';
 import BeachesList from './beaches/List'
@@ -17,17 +16,11 @@ function App() {
   },[])
 
   return (
-    <div className="App">
-      <Grid container style={{ paddingTop: 40}}>
-        <Grid item xs={4} style={{ marginLeft: 20, marginTop: 50}}>
-          <Menu filters={filters} setFilters={setFilters} />
-        </Grid>
-       <Grid container item xs={7} justify="center" style={{ marginLeft: 20, marginTop: 30}}>
-          {beaches &&  <BeachesList list={beaches} filters={filters}/>}
-       </Grid>
-    </Grid>
+    <div className="app">
+          <Menu beaches={beaches} filters={filters} setFilters={setFilters} />
+          {beaches &&  <BeachesList  list={beaches} filters={filters}/>}
    </div>
-  );
+  )
 }
 
 export default App;

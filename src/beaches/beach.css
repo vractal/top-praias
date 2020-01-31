@@ -13,7 +13,7 @@
 .overlay {
   position: relative;
   max-width: 900px;
-  margin: 1rem;
+  margin-bottom: 1rem;
   cursor: help;
 }
 

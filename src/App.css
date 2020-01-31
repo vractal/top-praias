@@ -1,7 +1,33 @@
-.App {
-  background-color: #f8fbfb
+html {
+  font-size: 20px;
 }
+
+.app {
+  background-color: #f8fbfb;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: 5rem;
+}
+
 
 .title {
   font-family: 'Baloo Tamma';
+}
+
+
+@media (max-width: 1425px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .app {
+    padding-top: 6rem;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
 }

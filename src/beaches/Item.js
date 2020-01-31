@@ -11,7 +11,7 @@ export default ({name, imgSrc, location, state, description }) =>{
               </div>
               <h4>{state}</h4>
             </div>
-            <div class="description" >
+            <div className="description" >
               <h1 className="title">{name}</h1>
               <p>{description}</p>
             </div>
